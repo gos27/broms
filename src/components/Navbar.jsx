@@ -26,14 +26,16 @@ const Navbar = () => {
       <Link to="/contact" className={isActive("/contact")}>
         Contact
       </Link>
-      
+      <Link to="/auth" className={isActive("/auth")}>
+        Login
+      </Link>
     </>
   );
 
   const AdminLinks = () => (
     <>
       <Link to="/dashboard" className={isActive("/dashboard")}>
-        Admin 
+        Admin
       </Link>
       <Link to="/students" className={isActive("/students")}>
         Students
@@ -109,14 +111,28 @@ const Navbar = () => {
                 className={`block py-2 ${isActive("/dashboard")}`}
                 onClick={toggleMenu}
               >
-                Admin Dashboard
+                Home
               </Link>
               <Link
-                to="/manage-posts"
-                className={`block py-2 ${isActive("/manage-posts")}`}
+                to="/students"
+                className={`block py-2 ${isActive("/students")}`}
                 onClick={toggleMenu}
               >
-                Manage Posts
+                Students
+              </Link>
+              <Link
+                to="/events"
+                className={`block py-2 ${isActive("/events")}`}
+                onClick={toggleMenu}
+              >
+                Events
+              </Link>
+              <Link
+                to="/contact-list"
+                className={`block py-2 ${isActive("/contact-list")}`}
+                onClick={toggleMenu}
+              >
+                Contact-List
               </Link>
               <button
                 onClick={() => {
@@ -145,33 +161,13 @@ const Navbar = () => {
                 About
               </Link>
               <Link
-                to="/academics"
-                className={`block py-2 ${isActive("/academics")}`}
-                onClick={toggleMenu}
-              >
-                Academics
-              </Link>
-              {/* <Link
-                to="/students"
-                className={`block py-2 ${isActive("/students")}`}
-                onClick={toggleMenu}
-              >
-                Students
-              </Link>
-              <Link
-                to="/events"
-                className={`block py-2 ${isActive("/events")}`}
-                onClick={toggleMenu}
-              >
-                Testimonials
-              </Link> */}
-              <Link
                 to="/contact"
                 className={`block py-2 ${isActive("/contact")}`}
                 onClick={toggleMenu}
               >
                 Contact
               </Link>
+
               {!user ? (
                 <Link
                   to="/auth"
