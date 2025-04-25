@@ -16,18 +16,18 @@ const Admission = () => {
         Session is in progress.
       </h4>
 
-      <div className="flex flex-col justify-center gap-4 text-center sm:flex-row">
+      <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <a
-          href="/forms/broms-application-2025.pdf" // replace with your actual file URL
+          href="/forms/broms-application-2025.pdf"
           download
-          className="rounded-lg bg-blue-600 px-6 py-3 text-center text-white transition hover:bg-blue-700"
+          className="w-full rounded-lg bg-blue-600 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto sm:text-base"
         >
-          Download Application Form
+          Application Form
         </a>
 
         <Link
           to="/contact"
-          className="rounded-lg bg-green-600 px-6 py-3 text-white transition hover:bg-green-700"
+          className="w-full rounded-lg bg-green-600 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-green-700 sm:w-auto sm:text-base"
         >
           Arrange a Visit
         </Link>
