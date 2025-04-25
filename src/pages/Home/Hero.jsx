@@ -87,26 +87,25 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative mt-8 h-[50vh] w-full">
+    <div className="relative mt-8 h-[60vh] w-full px-4 sm:h-[70vh] md:h-[80vh] lg:h-screen">
       <Slider {...settings}>
         {heroSlides.map((slide, index) => (
-          <div key={index} className="hero-slide relative h-[50vh] w-full">
-            {/* Background Image */}
+          <div key={index} className="hero-slide relative h-full w-full">
             <img
               src={slide.image}
               alt={slide.title}
-              className="h-full w-full object-cover"
-              loading="eager"
+              className="h-full w-full object-cover object-center"
             />
-            {/* Overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 p-6 text-center text-white">
-              <h1 className="mb-4 text-3xl font-bold md:text-5xl">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 px-4 text-center text-white sm:px-6 lg:px-8">
+              <h1 className="mb-4 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
                 {slide.title}
               </h1>
-              <p className="mb-6 text-lg md:text-xl">{slide.subtitle}</p>
+              <p className="mb-6 text-sm sm:text-base md:text-lg lg:text-xl">
+                {slide.subtitle}
+              </p>
               <Link
                 to={slide.link}
-                className="rounded-full bg-blue-400 px-6 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-500 hover:text-black"
+                className="rounded-full bg-blue-400 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-blue-500 hover:text-black sm:text-base md:text-lg"
               >
                 {slide.button}
               </Link>
